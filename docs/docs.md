@@ -1,3 +1,12 @@
+### All
+```bash
+gcc -ffreestanding -m32 -nostartfiles -c kernel.c -o kernel.o
+nasm -f elf32 -o boot.o boot.asm
+ld -m elf_i386 -T linker.ld -o iso/boot/kernel.bin kernel.o boot.o
+grub-mkrescue -o os.iso iso/
+qemu-system-i386 -cdrom os.iso
+```
+
 ### Compiling C code (core)
 
 ```bash

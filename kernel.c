@@ -29,7 +29,7 @@ void print_string(const char *str)
 
 void kernel_main(void)
 {
-    print_string("Hello, Kernel!\n");
+    print_string("Installing Vesperis Kernel...");
 
     while (1)
     {
